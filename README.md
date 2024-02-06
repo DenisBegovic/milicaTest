@@ -1,0 +1,2 @@
+# milicaTest
+Test intrapersonalnih sposobnosti
