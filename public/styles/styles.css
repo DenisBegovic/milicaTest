@@ -1,0 +1,76 @@
+body {
+    background-image: linear-gradient(to bottom, #d87d2b, #c45c54, #954f66, #5e475c, #393939);
+    height: 100vh;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    background-color: #EEEDEB;
+    max-width: 900px;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.2rem;
+    margin-top: 10px;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    border-top-right-radius: 1.2rem;
+    border-top-left-radius: 1.2rem;
+    background-color: #3C3633;
+}
+
+.explination {
+    background-color: aliceblue;
+    max-width: 60%;
+    padding: 1.5rem;
+    font-family: 'Roboto Slab', serif;
+    margin-left: 50px;
+    padding-bottom: 2.5rem;
+    font-size: larger;
+
+}
+
+.title {
+    margin-left: 50px;
+    font-family: 'Roboto Slab', serif;
+    font-size: x-large;
+}
+
+.test-hplk {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+    width: 150px;
+  }
+.btn-div {
+    align-self: center;
+    margin-top: 1rem;
+}
+.test-hplk:hover {
+  background-color: #fff;
+}
+
+.test-hplk:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/test.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page">
+
+            <p class="opening">
+                Ovaj upitnik sadrzi tvrdnje sto opisuju razlicita osjecanja i stavove koje imate prema drugim ljudima i sebi.
+                Procjenite koliko dobro ove recenice opisuju Vasa iskustva, osjecanja ili stavove, sluzeci se skalom od 1 do 7,
+                pri cemu brojevi znace:
+            </p>
+
+            <div class="scale-bg">
+                <div class="scale">
+                    <h4 class="num-1 number item"> 1 </h4>
+                    <h4 class="num-2 number item"> 2 </h4>
+                    <h4 class="num-3 number item"> 3 </h4>
+                    <h4 class="num-4 number item"> 4 </h4>
+                    <h4 class="num-5 number item"> 5 </h4>
+                    <h4 class="num-6 number item"> 6 </h4>
+                    <h4 class="num-7 number item"> 7 </h4>
+                    
+                    <div class="segment-exp item" id="seg-1">
+                        Uopšte ne
+                    </div>
+
+                    <div class="segment-exp item" id="seg-2">
+                        Uglavnom ne <br>
+                                   <----------
+                    </div>
+
+                    <div class="segment-exp item" id="seg-4">
+                        Nisam siguran
+                    </div>
+
+                    <div class="segment-exp item" id="seg-5">
+                        Uglavnom da <br>
+                                   ---------->
+                    </div>
+                    
+                    <div class="segment-exp item" id="seg-7">
+                        U potpunosti da
+                    </div>
+                </div>
+            </div>
+
+            <%if (locals.pitanja) {%>
+                <% for (let i = 0; i < pitanja.length; i++) { %>
+                    <div class="question" id="<%=i%>">
+                        <p class="text">
+                            <%= pitanja[i] %>
+                        </p>
+                        <form action="/test" method="post" class="buttons">
+                            <input type="hidden" value="<%=i + 1%>" name="question"></input>
+                            <button type="submit" name="score" value=1 class="xxl btn">1</button>
+                            <button type="submit" name="score" value=2 class="xl btn">2</button>
+                            <button type="submit" name="score" value=3 class="l btn">3</button>
+                            <button type="submit" name="score" value=4 class="m btn">4</button>
+                            <button type="submit" name="score" value=5 class="l btn">5</button>
+                            <button type="submit" name="score" value=6 class="xl btn">6</button>
+                            <button type="submit" name="score" value=7 class="xxl btn">7</button>
+                        </form>
+                    </div>
+
+                <%}%>
+            <%} else {%>
+                <h1>Pitanja nemaaaa</h1>
+            <%}%>
+            
+            <form action="/result" method="get">
+                <button type="submit" class="submit-btn">Potvrdi</button>
+            </form>
+            
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        
+    </body>
+</html>
